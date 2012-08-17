@@ -28,36 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBoxBin = new System.Windows.Forms.PictureBox();
+            this.groupBoxDisplay = new System.Windows.Forms.GroupBox();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.pictureBoxBin = new System.Windows.Forms.PictureBox();
+            this.groupBoxDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBin)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBoxDisplay
             // 
-            this.groupBox1.Controls.Add(this.buttonClose);
-            this.groupBox1.Controls.Add(this.pictureBoxBin);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(299, 120);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
-            // pictureBoxBin
-            // 
-            this.pictureBoxBin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxBin.Location = new System.Drawing.Point(21, 19);
-            this.pictureBoxBin.Name = "pictureBoxBin";
-            this.pictureBoxBin.Size = new System.Drawing.Size(256, 64);
-            this.pictureBoxBin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBin.TabIndex = 2;
-            this.pictureBoxBin.TabStop = false;
+            this.groupBoxDisplay.Controls.Add(this.buttonClose);
+            this.groupBoxDisplay.Controls.Add(this.pictureBoxBin);
+            this.groupBoxDisplay.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxDisplay.Name = "groupBoxDisplay";
+            this.groupBoxDisplay.Size = new System.Drawing.Size(172, 108);
+            this.groupBoxDisplay.TabIndex = 0;
+            this.groupBoxDisplay.TabStop = false;
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(99, 89);
+            this.buttonClose.Location = new System.Drawing.Point(35, 69);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(98, 23);
             this.buttonClose.TabIndex = 3;
@@ -65,12 +55,22 @@
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
+            // pictureBoxBin
+            // 
+            this.pictureBoxBin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxBin.Location = new System.Drawing.Point(21, 19);
+            this.pictureBoxBin.Name = "pictureBoxBin";
+            this.pictureBoxBin.Size = new System.Drawing.Size(128, 32);
+            this.pictureBoxBin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBin.TabIndex = 2;
+            this.pictureBoxBin.TabStop = false;
+            // 
             // Display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 146);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(200, 137);
+            this.Controls.Add(this.groupBoxDisplay);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Display";
@@ -78,8 +78,7 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Display";
-            this.Load += new System.EventHandler(this.Display_Load);
-            this.groupBox1.ResumeLayout(false);
+            this.groupBoxDisplay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBin)).EndInit();
             this.ResumeLayout(false);
 
@@ -87,7 +86,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxDisplay;
         private System.Windows.Forms.PictureBox pictureBoxBin;
         private System.Windows.Forms.Button buttonClose;
 
