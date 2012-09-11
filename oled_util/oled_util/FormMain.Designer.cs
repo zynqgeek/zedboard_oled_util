@@ -38,6 +38,7 @@
             this.buttonSaveBin = new System.Windows.Forms.Button();
             this.buttonOpenPng = new System.Windows.Forms.Button();
             this.pictureBoxPng = new System.Windows.Forms.PictureBox();
+            this.buttonConvertDirectory = new System.Windows.Forms.Button();
             this.groupBoxBinToPng.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBin)).BeginInit();
             this.groupBoxPngToBin.SuspendLayout();
@@ -99,6 +100,7 @@
             // 
             // groupBoxPngToBin
             // 
+            this.groupBoxPngToBin.Controls.Add(this.buttonConvertDirectory);
             this.groupBoxPngToBin.Controls.Add(this.buttonClearPng);
             this.groupBoxPngToBin.Controls.Add(this.buttonSaveBin);
             this.groupBoxPngToBin.Controls.Add(this.buttonOpenPng);
@@ -143,12 +145,22 @@
             // pictureBoxPng
             // 
             this.pictureBoxPng.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPng.Location = new System.Drawing.Point(65, 69);
+            this.pictureBoxPng.Location = new System.Drawing.Point(65, 53);
             this.pictureBoxPng.Name = "pictureBoxPng";
             this.pictureBoxPng.Size = new System.Drawing.Size(128, 32);
             this.pictureBoxPng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPng.TabIndex = 1;
             this.pictureBoxPng.TabStop = false;
+            // 
+            // buttonConvertDirectory
+            // 
+            this.buttonConvertDirectory.Location = new System.Drawing.Point(61, 93);
+            this.buttonConvertDirectory.Name = "buttonConvertDirectory";
+            this.buttonConvertDirectory.Size = new System.Drawing.Size(132, 23);
+            this.buttonConvertDirectory.TabIndex = 6;
+            this.buttonConvertDirectory.Text = "Convert Entire Directory";
+            this.buttonConvertDirectory.UseVisualStyleBackColor = true;
+            this.buttonConvertDirectory.Click += new System.EventHandler(this.buttonConvertDirectory_Click);
             // 
             // FormMain
             // 
@@ -179,6 +191,7 @@
         private System.Windows.Forms.PictureBox pictureBoxPng;
         private System.Windows.Forms.Button buttonClearBin;
         private System.Windows.Forms.Button buttonClearPng;
+        private System.Windows.Forms.Button buttonConvertDirectory;
 
     }
 }

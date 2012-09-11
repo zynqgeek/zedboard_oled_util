@@ -246,6 +246,32 @@ namespace oled_util
 
         #endregion .png -> .bin
 
+        private void buttonConvertDirectory_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fdb = new FolderBrowserDialog();
+
+            if (fdb.ShowDialog() == DialogResult.OK)
+            {
+                string folder = fdb.SelectedPath;
+                foreach (string fileName in Directory.GetFiles(folder, "*.png", SearchOption.TopDirectoryOnly))
+                {
+                    string baseFileNameWithPath = fileName.Substring(0, fileName.LastIndexOf('.'));
+
+                    byte[] byteArray = ConversionHelper.bitmapToByteArray(new Bitmap(fileName));
+
+                    File.WriteAllBytes(baseFileNameWithPath + ".bin", byteArray);
+
+                    //StreamWriter sw = new StreamWriter(baseFileNameWithPath + ".bin");
+
+                    //sw.Write(byteArray);
+
+                    //sw.Close();
+                }
+
+                MessageBox.Show(Directory.GetFiles(folder, "*.png", SearchOption.TopDirectoryOnly).Length + " images converted.");
+            }
+        }
+
         #endregion Button Pushes
 
     }
